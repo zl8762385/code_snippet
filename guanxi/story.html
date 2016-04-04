@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>剧本任务关系图</title>
+        <!--<script src="scripts/jquery.min.js"></script>-->
+
+        <script language="javascript" type="text/javascript" src="http://debug.yunbianju.com/statics/js/jquery-1.9.1.min.js"></script>
+        <script src="http://debug.yunbianju.com/statics/js/libs/layer/layer.js?v=100"></script>
+        <link rel="stylesheet" type="text/css" href="http://debug.yunbianju.com/statics/css/bbd/index_v2/dsj_admin.css"/>
+
+        <link href="scripts/bootstrap.min.css" rel="stylesheet">
+        <link href="scripts/font-awesome.css" rel="stylesheet">
+        <!--<link href="scripts/main.css" rel="stylesheet">-->
+        <!--<link href="scripts/gollum-template.css" rel="stylesheet">-->
+
+        <link rel="stylesheet" href="scripts/jsPlumbToolkit-defaults.css">
+        <link rel="stylesheet" href="scripts/jsPlumbToolkit-demo.css">
+        <link rel="stylesheet" href="scripts/app.css">
+        <link rel="stylesheet" type="text/css" href="css/context.standalone.css">
+
+        <!--<link rel="stylesheet" type="text/css" href="css/demo.css">-->
+
+    </head>
+
+    <body>
+
+    <div node-data="character" style="border:1px solid #000;width:100px; cursor: pointer;">
+        <ul>
+            <li v-data="11">张三</li>
+            <li v-data="22">李四</li>
+            <li v-data="33">王五</li>
+            <li v-data="34">王五1</li>
+            <li v-data="35">王五2</li>
+            <li v-data="36">王五3</li>
+            <li v-data="37">王五4</li>
+        </ul>
+    </div>
+    <input type="button" value="增加新角色" action-data="add_character" />
+    <input type="button" value="保存数据" action-data="save_data" />
+    <input type="button" value="显示数据" action-data="showdata" />
+        <div class="jtk-demo-main" style="border:1px solid red;">
+            <!-- demo -->
+            <div class="jtk-demo-canvas canvas-wide statemachine-demo jtk-surface jtk-surface-nopan" id="canvas">
+                 <!--<div class="w" id="opened">BEGIN-->
+                    <!--<div class="ep" action="begin"></div>-->
+                <!--</div>-->
+                <!--<div class="w" id="phone1">PHONE INTERVIEW 1-->
+                    <!--<div class="ep" action="phone1"></div>-->
+                <!--</div>-->
+                <!--<div class="w" id="phone2">PHONE INTERVIEW 2-->
+                    <!--<div class="ep" action="phone2"></div>-->
+                <!--</div>-->
+                <!--<div class="w" id="inperson">IN PERSON-->
+                    <!--<div class="ep" action="inperson"></div>-->
+                <!--</div>-->
+                <!--<div class="w" id="rejected">REJECTED-->
+                    <!--<div class="ep" action="rejected"></div>-->
+                <!--</div>-->
+
+                <!--
+                <div class="w" id="zhang" style="left:100px;top:20px">zhang
+                    <div class="ep" action="zhang"></div>
+                </div>
+
+                <div class="w" id="zhang1" style="left:230px;top:90px;">zhang1
+                    <div class="ep" action="zhang1"></div>
+                </div>
+
+                <div class="w" id="zhang2" style="left:100px;top:150px;">zhang1
+                    <div class="ep" action="zhang2"></div>
+                </div>
+
+                <div class="w" id="zhang3" style="left:230px;top:270px;">zhang1
+                    <div class="ep" action="zhang3"></div>
+                </div>
+                -->
+
+            </div>
+            <!-- /demo -->
+        </div>
+
+        <script src="scripts/jsPlumb-2.0.7.js"></script>
+
+        <!--
+        <script src="scripts/app.js"></script>
+        -->
+        <script src="scripts/context.js"></script>
+        <script src="scripts/story.js"></script>
+        <script src="scripts/jquery.validate.js"></script>
+<script src="scripts/additional-methods.js"></script>
+<script src="scripts/braintree.js"></script>
+
+
+    <div style="display:none" id="edit_view">
+            <input name="edit_id" id="edit_id" type="hidden" value=""/>
+
+            <!--表单1-->
+            <ul class="mglr2 frm1 t2e b2e">
+                <li>
+                    <dl class="clr frm">
+                        <dt>备注</dt>
+                        <dd>
+                            <input name="edit_introduce" id="edit_introduce" type="text" value="" />
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+    </div>
+
+    <div style="display:none" id="add_character">
+
+        <!--表单1-->
+        <ul class="mglr2 frm1 t2e b2e">
+            <li>
+                <dl class="clr frm">
+                    <dt>角色名称</dt>
+                    <dd>
+                        <input name="character_name" id="character_name" type="text" value="" />
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    </body>
+
+</html>
